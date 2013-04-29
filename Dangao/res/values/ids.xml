@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="menu_checkbox">false</item>
+    <item type="id" name="title_text">false</item>
+    <item type="id" name="menu1_gallery">false</item>
+</resources>
