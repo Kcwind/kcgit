@@ -42,7 +42,7 @@ public class MainTabActivity extends RoboTabActivity {
 		CheckBox menuBox = (CheckBox) inflater.inflate(R.layout.menu_item, null);
 		menuBox.setText(tag);
 		Drawable drawable= res.getDrawable(resId);
-		/// ��һ������Ҫ��,���򲻻���ʾ.
+		/// 这里必须加上，不然会不显示
 		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight()); 
 		menuBox.setCompoundDrawables(null, drawable, null, null);
 		return menuBox;
