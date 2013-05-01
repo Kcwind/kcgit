@@ -29,11 +29,11 @@ public class MainTabActivity extends RoboTabActivity {
 		tabHost = getTabHost();
 		Intent intent = new Intent(this, MenuActivity.class);
 		
-		tabHost.addTab(tabHost.newTabSpec("菜单").setIndicator(getMenuBox("菜单", R.drawable.menu_t01)).setContent(intent));
-		tabHost.addTab(tabHost.newTabSpec("首页").setIndicator(getMenuBox("首页", R.drawable.menu_t02)).setContent(intent));
-		tabHost.addTab(tabHost.newTabSpec("呼叫").setIndicator(getMenuBox("呼叫", R.drawable.menu_t03)).setContent(intent));
-		tabHost.addTab(tabHost.newTabSpec("企业信息").setIndicator(getMenuBox("企业信息", R.drawable.menu_t04)).setContent(intent));
-		tabHost.addTab(tabHost.newTabSpec("更多").setIndicator(getMenuBox("更多", R.drawable.menu_t05)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("鑿滃崟").setIndicator(getMenuBox("鑿滃崟", R.drawable.menu_t01)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("棣栭〉").setIndicator(getMenuBox("棣栭〉", R.drawable.menu_t02)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("浼佷笟淇℃伅").setIndicator(getMenuBox("浼佷笟淇℃伅", R.drawable.menu_t03)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("鑱旂郴鎴戜滑").setIndicator(getMenuBox("鑱旂郴鎴戜滑", R.drawable.menu_t04)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("鏇村").setIndicator(getMenuBox("鏇村", R.drawable.menu_t05)).setContent(intent));
 		tabHost.setCurrentTab(1);
 		
 	}
@@ -42,7 +42,7 @@ public class MainTabActivity extends RoboTabActivity {
 		CheckBox menuBox = (CheckBox) inflater.inflate(R.layout.menu_item, null);
 		menuBox.setText(tag);
 		Drawable drawable= res.getDrawable(resId);
-		/// 这一步必须要做,否则不会显示.
+		/// 锟斤拷一锟斤拷锟斤拷锟斤拷要锟斤拷,锟斤拷锟津不伙拷锟斤拷示.
 		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight()); 
 		menuBox.setCompoundDrawables(null, drawable, null, null);
 		return menuBox;
