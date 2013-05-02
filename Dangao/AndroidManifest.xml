@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         
-        <activity android:name=".MenuActivity"/>
+        <activity android:name="com.kc.dangao.MenuActivity"/>
+        <activity android:name="com.kc.dangao.CompanyInfoActivity"/>
     </application>
 
 </manifest>

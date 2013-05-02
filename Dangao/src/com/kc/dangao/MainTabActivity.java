@@ -28,11 +28,11 @@ public class MainTabActivity extends RoboTabActivity {
 	private void initTab() {
 		tabHost = getTabHost();
 		Intent intent = new Intent(this, MenuActivity.class);
-		
+		Intent intent4 = new Intent(this, CompanyInfoActivity.class);
 		tabHost.addTab(tabHost.newTabSpec("菜单").setIndicator(getMenuBox("菜单", R.drawable.menu_t01)).setContent(intent));
 		tabHost.addTab(tabHost.newTabSpec("首页").setIndicator(getMenuBox("首页", R.drawable.menu_t02)).setContent(intent));
-		tabHost.addTab(tabHost.newTabSpec("企业信息").setIndicator(getMenuBox("企业信息", R.drawable.menu_t03)).setContent(intent));
-		tabHost.addTab(tabHost.newTabSpec("联系我们").setIndicator(getMenuBox("联系我们", R.drawable.menu_t04)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("联系我们").setIndicator(getMenuBox("联系我们", R.drawable.menu_t03)).setContent(intent));
+		tabHost.addTab(tabHost.newTabSpec("企业信息").setIndicator(getMenuBox("企业信息", R.drawable.menu_t04)).setContent(intent4));
 		tabHost.addTab(tabHost.newTabSpec("更多").setIndicator(getMenuBox("更多", R.drawable.menu_t05)).setContent(intent));
 		tabHost.setCurrentTab(1);
 		
