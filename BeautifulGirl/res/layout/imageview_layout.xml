@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<!-- <Gallery
+	    android:id="@id/imageview_gallery"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginTop="8dip"
+	    android:layout_marginBottom="8dip"
+	    android:spacing="5dip"/> -->
+    
+	<android.support.v4.view.ViewPager 
+        android:id="@id/imageview_viewpager"  
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+        android:layout_gravity="center" />
+</LinearLayout>

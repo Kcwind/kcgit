@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="main_grid">false</item>
+    <item type="id" name="main_griditem_image">false</item>
+    <item type="id" name="main_griditem_text">false</item>
+    <item type="id" name="imageview_viewpager">false</item>
+    
+</resources>
