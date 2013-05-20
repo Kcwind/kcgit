@@ -8,11 +8,14 @@ import android.app.WallpaperManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.kc.beautifulgirl.adapter.ImageViewPagerAdapter;
@@ -23,13 +26,15 @@ public class ImageViewActivity extends BaseActivity {
 	private WallpaperManager wallpaperManager;
 	private ImageViewPagerAdapter pagerAdapter;
 	private int[] ids;
+	private List<View> views;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ids = getItems();
 		wallpaperManager = WallpaperManager.getInstance(this);
-		pagerAdapter = new ImageViewPagerAdapter(getViews());
+		views = getViews();
+		pagerAdapter = new ImageViewPagerAdapter(this, views);
 		viewPager.setAdapter(pagerAdapter);
 		
 	}
@@ -43,8 +48,24 @@ public class ImageViewActivity extends BaseActivity {
 
 	@Override
 	public void setListeners() {
-		
-		// TODO Auto-generated method stub
+		final Animation inAnimation = AnimationUtils.loadAnimation(this, R.anim.in_anim);
+		viewPager.setOnPageChangeListener(new OnPageChangeListener() {
+			
+			@Override
+			public void onPageSelected(int arg0) {
+				views.get(arg0).startAnimation(inAnimation);
+			}
+			
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				// TODO Auto-generated method stub
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				// TODO Auto-generated method stub
+			}
+		});
 		
 	}
 
